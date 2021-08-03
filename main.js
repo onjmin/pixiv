@@ -37,7 +37,7 @@
             target: '_blank'
         });
         rpgen3.addInputStr(holder,{
-            label: 'url',
+            label: 'クリックでコピー',
             value: url,
             copy: true
         });
