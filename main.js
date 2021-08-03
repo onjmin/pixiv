@@ -31,11 +31,16 @@
         msg('画像を探します');
         const [elm, id] = await search();
         holder.empty();
+        const url = 'https://www.pixiv.net/artworks/' + id;
+        $('<a>').appendTo(holder).text(url).prop({
+            href: url,
+            target: '_blank'
+        });
         rpgen3.addInputStr(holder,{
             label: 'url',
-            value: 'https://www.pixiv.net/artworks/' + id,
+            value: url,
             copy: true
-        })
+        });
         holder.append(elm);
         msg('画像を見つけた');
         running = false;
