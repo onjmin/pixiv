@@ -3,6 +3,7 @@
     await getScript('https://code.jquery.com/jquery-3.3.1.min.js');
     const $ = window.$;
     const rpgen3 = await importAll([
+        'util',
         'input',
         'random'
     ].map(v => `https://rpgen3.github.io/mylib/export/${v}.mjs`));
@@ -11,6 +12,7 @@
         padding: '1em',
         'user-select': 'none'
     });
+    $('<h1>').appendTo(html).text('Pixivの画像をランダムで表示するだけ');
     const msg = (()=>{
         const elm = $("<div>").appendTo(html);
         return (str, isError) => $("<span>").appendTo(elm.empty()).text(`${str} (${rpgen3.getTime()})`).css({
