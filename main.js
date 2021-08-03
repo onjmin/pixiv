@@ -24,11 +24,7 @@
           holder = $('<div>').appendTo(html);
     let running = false;
     $('<button>').appendTo(ui).text('探すボタン').on('click', async () => {
-        if(running) msg(rpgen3.randArr([
-            '今探してるところだぞ',
-            'ボタンを連打するなよ',
-            '連打しても速くならないぞ'
-        ]), true);
+        if(running) return;
         running = true;
         msg('画像を探します');
         const [elm, id] = await search();
