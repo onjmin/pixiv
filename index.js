@@ -8,7 +8,7 @@
         'input',
         'random'
     ].map(v => `https://rpgen3.github.io/mylib/export/${v}.mjs`));
-    rpgen3.addCSS('https://onjmin.github.io/pixiv/main.css');
+    rpgen3.addCSS('https://onjmin.github.io/pixiv/index.css');
     const html = $('body').empty().css({
         'text-align': 'center',
         padding: '1em',
